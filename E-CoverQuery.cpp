@@ -1,19 +1,14 @@
-#include <iostream>
-#include <set>
-#include <algorithm>
-
+#include<bits/stdc++.h>
 using namespace std;
 
 int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
-
     long long N;
     int Q;
     if (!(cin >> N >> Q)) return 0;
     set<pair<long long, long long>> inter;
     long long total_black = 0;
-
     for (int i = 0; i < Q; ++i) {
         long long L, R;
         cin >> L >> R;
@@ -38,6 +33,5 @@ int main() {
         inter.insert({cur_L, cur_R});
         cout << N - total_black << "\n";
     }
-
     return 0;
 }
